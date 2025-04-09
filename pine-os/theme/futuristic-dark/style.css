@@ -1,0 +1,83 @@
+yes
+:root {
+  --primary: #00ff9d;
+  --secondary: #0085ff;
+  --background: #0a0a0a;
+  --text: #ffffff;
+  --accent: #ff00aa;
+  --blur: 10px;
+  --transparency: 0.9;
+  --dropdown-bg: #222222;
+  --dropdown-text: #ffffff;
+  --dropdown-border: #00ff9d;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+}
+
+.theme-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.theme-dropdown {
+  padding: 8px 12px;
+  background: var(--dropdown-bg);
+  color: var(--dropdown-text);
+  border: 1px solid var(--dropdown-border);
+  border-radius: 4px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-dropdown:hover {
+  background: var(--primary);
+  color: var(--background);
+}
+
+body {
+  background-color: var(--background);
+  backdrop-filter: blur(var(--blur));
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.widget {
+  background: rgba(20, 20, 20, var(--transparency));
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.clock .time {
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+}
+
+.clock .date {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.system-stats .stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.system-stats .label {
+  color: var(--secondary);
+}
+
+.system-stats .value {
+  font-weight: bold;
+}
