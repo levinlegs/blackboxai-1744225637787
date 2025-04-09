@@ -1,0 +1,15 @@
+# SSD Optimization
+ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="none"
+
+# Power Saving
+SUBSYSTEM=="power_supply", ATTR{energy_full}=="*", ATTR{energy_now}=="*", RUN+="/usr/bin/powertop --auto-tune"
+
+# Input Responsiveness
+SUBSYSTEM=="input", GROUP="input", MODE="0660"
+KERNEL=="event[0-9]*", GROUP="input", MODE="0640"
+
+# Graphics Performance
+ACTION=="add", SUBSYSTEM=="drm", KERNEL=="card*", ATTR{device/power_dpm_force_performance_level}="high"
+
+# USB Power Management
+ACTION=="add", SUBSYSTEM=="usb", TEST=="power/control", ATTR{power/control}="auto"
