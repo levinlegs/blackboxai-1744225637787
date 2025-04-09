@@ -1,0 +1,25 @@
+{
+  "name": "Futuristic Dark",
+  "version": "1.0",
+  "author": "Pine OS Team",
+  "colors": {
+    "primary": "#00ff9d",
+    "secondary": "#0085ff",
+    "background": "#0a0a0a",
+    "text": "#ffffff",
+    "accent": "#ff00aa"
+  },
+  "fonts": {
+    "main": "Roboto",
+    "monospace": "Fira Code",
+    "sizes": {
+      "small": "12px",
+      "medium": "16px",
+      "large": "24px"
+    }
+  },
+  "effects": {
+    "blur": "10px",
+    "transparency": "0.9"
+  }
+}
