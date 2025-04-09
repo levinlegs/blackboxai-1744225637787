@@ -1,0 +1,12 @@
+{
+  "enabled": ["clock", "system-stats", "calendar", "quick-launch"],
+  "defaultPosition": {
+    "clock": {"top": "20px", "right": "20px", "width": "200px"},
+    "system-stats": {"bottom": "20px", "left": "20px", "width": "300px"},
+    "calendar": {"top": "20px", "left": "20px", "width": "250px"},
+    "quick-launch": {"bottom": "20px", "right": "20px", "width": "150px"}
+  },
+  "theme": "default",
+  "autoStart": true,
+  "refreshInterval": 1000
+}
